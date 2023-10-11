@@ -25,7 +25,7 @@ Base = declarative_base()
 
 
 def get_session():
-    from fadck.storage import dir
+    from fadck.disk import dir
     if dir.MAIN_POOL_VALID:
         return MainSession()
     if dir.BACKUP_POOL_VALID:
@@ -35,7 +35,7 @@ def get_session():
 
 def startup():
     # Make the database directory.
-    from fadck.storage.dir import ensure as ensure_dir
+    from fadck.disk.dir import ensure as ensure_dir
     ensure_dir('databases')
     # Build all the necessary tables.
     Base.metadata.create_all(bind=main_engine)

@@ -5,8 +5,8 @@ from fastapi import FastAPI
 
 @asynccontextmanager
 async def lifespan(app_ins: FastAPI):
-    # Initial the storage.
-    from fadck.storage.dir import startup as storage_startup
+    # Initial the disk.
+    from fadck.disk.dir import startup as storage_startup
     storage_startup()
     # Initial the database.
     from fadck.database.base import startup as database_startup
