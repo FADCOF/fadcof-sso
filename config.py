@@ -1,3 +1,8 @@
 # -*- coding: utf-8 -*-
 DB_NAME = 'sqlite3'
 DB_LABEL = 'user'
+
+PASSWORD_HASH_SALT = 'sha3-256'
+PASSWORD_HASH_STORE = 'sm3'
+SESSION_METHOD = 'sm4_cbc'
+SESSION_KEY = b'1234567890123456'

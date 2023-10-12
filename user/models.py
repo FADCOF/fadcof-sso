@@ -37,6 +37,12 @@ class User(ModifyRecordBase):
     password = Column(String)
     email = Column(String, default='')
     is_active = Column(Boolean, default=True)
+    first_name_native = Column(String, default='')
+    middle_name_native = Column(String, default='')
+    last_name_native = Column(String, default='')
+    first_name_alphabet = Column(String, default='')
+    middle_name_alphabet = Column(String, default='')
+    last_name_alphabet = Column(String, default='')
 
 
 class UserBelongs(ModifyRecordBase):

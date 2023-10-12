@@ -26,6 +26,7 @@ Base = declarative_base()
 
 def get_session():
     from fadck.disk import dir
+    dir.update_pool_states()
     if dir.MAIN_POOL_VALID:
         return MainSession()
     if dir.BACKUP_POOL_VALID:

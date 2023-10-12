@@ -1,3 +1,6 @@
 fastapi
-sqlalchemy
 uvicorn
+sqlalchemy
+pydantic
+pycryptodome
+httpx
